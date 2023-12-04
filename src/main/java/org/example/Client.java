@@ -12,8 +12,7 @@ public class Client {
         int port = 8080;
         try (Socket clientSocket = new Socket(host, port);
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())))
-        {
+             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
             out.println("TIMOFEY ZABOLOTKO");
             String resp = in.readLine();
             System.out.println(resp);
